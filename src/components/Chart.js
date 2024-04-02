@@ -72,7 +72,7 @@ const Chart = ({ id }) => {
           .then((res) => res.json())
           .then((json) => json);
 
-        console.log("chart-data", data);
+        // console.log("chart-data", data);
 
         let convertedData = data[type].map((item) => {
           return {
@@ -81,7 +81,7 @@ const Chart = ({ id }) => {
           };
         });
 
-        console.log(convertedData);
+        // console.log(convertedData);
         setChartData(convertedData);
       } catch (error) {
         console.log(error);
