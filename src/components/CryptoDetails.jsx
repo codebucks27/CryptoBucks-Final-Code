@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 import { useLayoutEffect } from "react";
 import { CryptoContext } from "../context/CryptoContext";
 import Chart from "./Chart";
@@ -48,13 +48,13 @@ const CryptoDetails = () => {
 
   return ReactDOM.createPortal(
     <div
-      className="fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:
-    backdrop-blur-sm flex items-center justify-center font-nunito
+      className="fixed top-0 w-full h-full bg-gray-200/30 first-letter:
+    backdrop-blur-xs flex items-center justify-center font-nunito
     "
       onClick={close}
     >
       <div
-        className="w-[65%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative"
+        className="w-[65%] h-[75%] bg-gray-300/75 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {data ? (
@@ -69,8 +69,8 @@ const CryptoDetails = () => {
                 <h1 className="text-xl capitalize font-medium">{data.name}</h1>
                 <span
                   className="text-sm
-        py-0.5 px-2.5 ml-2 bg-cyan text-cyan bg-opacity-25
-        rounded uppercase
+        py-0.5 px-2.5 ml-2 bg-cyan/25 text-cyan
+        rounded-sm uppercase
         "
                 >
                   {data.symbol}
@@ -85,11 +85,11 @@ const CryptoDetails = () => {
                     </span>
                     <div
                       className={`text-sm px-1 ml-2 font-medium flex items-center
-          rounded uppercase bg-opacity-25
+          rounded-sm uppercase
           ${
             data.market_data.price_change_percentage_24h > 0
-              ? "bg-green text-green"
-              : "bg-red text-red"
+              ? "bg-green/25 text-green"
+              : "bg-red/25 text-red"
           }
           `}
                     >
@@ -237,7 +237,7 @@ const CryptoDetails = () => {
                   <a
                     target={"_blank"}
                     rel="noreferrer"
-                    className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded"
+                    className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded-sm"
                     href={data?.links?.homepage[0]}
                   >
                     {data?.links?.homepage[0].substring(0, 30)}
@@ -245,7 +245,7 @@ const CryptoDetails = () => {
                   <a
                     target={"_blank"}
                     rel="noreferrer"
-                    className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded"
+                    className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded-sm"
                     href={data?.links?.blockchain_site[0]}
                   >
                     {data?.links?.blockchain_site[0].substring(0, 30)}
@@ -255,7 +255,7 @@ const CryptoDetails = () => {
                     <a
                       target={"_blank"}
                       rel="noreferrer"
-                      className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded"
+                      className="text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded-sm"
                       href={data?.links?.official_forum_url[0]}
                     >
                       {data?.links?.official_forum_url[0].substring(0, 30)}
@@ -270,7 +270,7 @@ const CryptoDetails = () => {
                   <div className="flex justify-between">
                     <div
                       className={`text-sm px-1 ml-2 my-1 font-medium flex items-center
-          rounded uppercase bg-opacity-25 bg-green text-green
+          rounded-sm uppercase  bg-green/25 text-green
           
           `}
                     >
@@ -296,8 +296,8 @@ const CryptoDetails = () => {
                   <div className="flex justify-between">
                     <div
                       className={`text-sm px-1 ml-2 my-1 font-medium flex items-center
-          rounded uppercase bg-opacity-25
-           bg-red text-red
+          rounded-sm uppercase
+           bg-red/25 text-red
           `}
                     >
                       <span>

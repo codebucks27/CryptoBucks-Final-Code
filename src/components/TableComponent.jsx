@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { CryptoContext } from "./../context/CryptoContext";
 import Pagination from "./Pagination";
 import { StorageContext } from "./../context/StorageContext";
@@ -55,7 +55,7 @@ const TableComponent = () => {
 
   return (
     <>
-      <div className="flex flex-col mt-9 border border-gray-100 rounded">
+      <div className="flex flex-col mt-9 border border-gray-100 rounded-sm">
         {cryptoData ? (
           <table className="w-full table-auto">
             <thead

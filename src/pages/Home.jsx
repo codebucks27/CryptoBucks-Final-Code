@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import { CryptoProvider } from "../context/CryptoContext";

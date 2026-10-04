@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import { StorageContext } from "../context/StorageContext";
 import { CryptoContext } from "./../context/CryptoContext";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const SaveBtn = ({ data }) => {
   const { saveCoin, allCoins, removeCoin } = useContext(StorageContext);
@@ -56,7 +56,7 @@ const Saved = () => {
 
   return (
     <section className="w-[80%] h-full flex flex-col mt-16 mb-24 relative">
-      <div className="w-full min-h-[60vh] py-8  border border-gray-100 rounded">
+      <div className="w-full min-h-[60vh] py-8  border border-gray-100 rounded-sm">
         {savedData ? (
           <table className="w-full table-auto">
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100 ">

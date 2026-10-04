@@ -1,5 +1,66 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+@import "tailwindcss" source("./");
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --color-*: initial;
+  --color-gray-100: #808080;
+  --color-gray-200: #323232;
+  --color-gray-300: #212121;
+  --color-white: #fff;
+  --color-cyan: #14ffec;
+  --color-red: #d6436e;
+  --color-green: #25da72;
+
+  --font-nunito: "Nunito";
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font-family: var(--font-sans);
+
+  --text-*: initial;
+  --text-sm: 14px;
+  --text-md: 18px;
+  --text-lg: 24px;
+  --text-xl: 32px;
+  --text-base: 16px;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+@custom-variant hover (&:hover);
+
+@utility outline-0 {
+  outline-style: revert;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-gray-200);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+  }
+
+  td,
+  th {
+    padding-inline: 1px;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  :disabled {
+    cursor: default;
+  }
+}

@@ -46,8 +46,7 @@ const ChartComponent = ({ data, currency, type }) => {
         <XAxis dataKey="date" hide />
         <YAxis dataKey={type} hide domain={["auto", "auto"]} />
         <Tooltip
-          content={<CustomTooltip />}
-          currency={currency}
+          content={<CustomTooltip currency={currency} />}
           cursor={false}
           wrapperStyle={{ outline: "none" }}
         />
@@ -96,30 +95,30 @@ const Chart = ({ id }) => {
       <ChartComponent data={chartData} currency={currency} type={type} />
       <div className="flex">
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
             type === "prices"
-              ? "bg-cyan text-cyan"
-              : "bg-gray-200 text-gray-100"
+              ? "bg-cyan/25 text-cyan"
+              : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setType("prices")}
         >
           Price
         </button>
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
             type === "market_caps"
-              ? "bg-cyan text-cyan"
-              : "bg-gray-200 text-gray-100"
+              ? "bg-cyan/25 text-cyan"
+              : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setType("market_caps")}
         >
           market caps
         </button>
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
             type === "total_volumes"
-              ? "bg-cyan text-cyan"
-              : "bg-gray-200 text-gray-100"
+              ? "bg-cyan/25 text-cyan"
+              : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setType("total_volumes")}
         >
@@ -127,24 +126,24 @@ const Chart = ({ id }) => {
         </button>
 
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
-            days === 7 ? "bg-cyan text-cyan" : "bg-gray-200 text-gray-100"
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
+            days === 7 ? "bg-cyan/25 text-cyan" : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setDays(7)}
         >
           7d
         </button>
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
-            days === 14 ? "bg-cyan text-cyan" : "bg-gray-200 text-gray-100"
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
+            days === 14 ? "bg-cyan/25 text-cyan" : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setDays(14)}
         >
           14d
         </button>
         <button
-          className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
-            days === 30 ? "bg-cyan text-cyan" : "bg-gray-200 text-gray-100"
+          className={`text-sm py-0.5 px-1.5 ml-2 rounded-sm capitalize ${
+            days === 30 ? "bg-cyan/25 text-cyan" : "bg-gray-200/25 text-gray-100"
           }`}
           onClick={() => setDays(30)}
         >
