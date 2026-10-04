@@ -49,8 +49,8 @@ const Filters = () => {
             name="currency"
             ref={currencyRef}
             placeholder="usd"
-            className="w-16 rounded bg-gray-200 placeholder:text-gray-100
-     pl-2 required outline-0 border border-transparent 
+            className="w-16 rounded-sm bg-gray-200 placeholder:text-gray-100
+     pl-2 required outline-0 border border-gray-200
      focus:border-cyan leading-4
      "
           />
@@ -63,7 +63,7 @@ const Filters = () => {
           <span className="font-bold mr-2">sort by: </span>
           <select
             name="sortby"
-            className="rounded bg-gray-200 text-base 
+            className="rounded-sm bg-gray-200 text-base
          pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0
          "
             onClick={handleSort}

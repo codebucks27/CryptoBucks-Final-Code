@@ -42,3 +42,6 @@ If you want to learn how to create it please follow below tutorial👇: <br />
 
 
 
+### Dependency and build migration
+
+Dependencies now use React 19, React Router 8, Tailwind CSS 4, Vite, and Vitest. JSX files, router imports, Tailwind styles, vitals callbacks, and test/lint configuration were migrated. With Bun 1.4.2 and Node.js 24.15+, run `bun install`, `bun run start`, `bun run build` (outputs `build/`), `bun run test --run`, and `bun run lint`.

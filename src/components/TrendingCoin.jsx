@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const TrendingCoin = ({ data }) => {
   let navigate = useNavigate();
@@ -12,7 +12,7 @@ const TrendingCoin = ({ data }) => {
     <div
       className="w-[40%] bg-gray-200 mb-12
     last:mb-0 rounded-lg p-4 relative cursor-pointer
-    hover:bg-gray-100 hover:bg-opacity-40
+    hover:bg-gray-100/40
     "
       onClick={() => getCoinDetails(data.id)}
     >

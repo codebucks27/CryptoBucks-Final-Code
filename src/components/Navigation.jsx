@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const Navigation = () => {
   return (
@@ -19,7 +19,7 @@ ${
     ? "bg-cyan text-gray-300"
     : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
 }
-    border-0 cursor-pointer rounded capitalize font-semibold`;
+    border-0 cursor-pointer rounded-sm capitalize font-semibold`;
         }}
       >
         Crypto
@@ -35,7 +35,7 @@ ${
     ? "bg-cyan text-gray-300"
     : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
 }
-    border-0 cursor-pointer rounded capitalize font-semibold`;
+    border-0 cursor-pointer rounded-sm capitalize font-semibold`;
         }}
       >
         trending
@@ -51,7 +51,7 @@ ${
     ? "bg-cyan text-gray-300"
     : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
 }
-    border-0 cursor-pointer rounded capitalize font-semibold`;
+    border-0 cursor-pointer rounded-sm capitalize font-semibold`;
         }}
       >
         saved
